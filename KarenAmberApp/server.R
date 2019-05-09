@@ -9,17 +9,16 @@
 
 library(shiny)
 
-# Define server logic required to draw a histogram
+# Define server logic required to draw a scatter plot
 shinyServer(function(input, output) {
    
-  output$distPlot <- renderPlot({
+  output$pointPlot <- renderPlot({
+    pl <- ggplot(data = data.pheno, aes_string(x = input$trait1, #choose a trait for the x axis 
+                                               y = input$trait2, #choose a trait for the y axiz
+                                               color = input$trait3)) #choose a trait for a color overlay
+    pl + geom_point() #make a scatter plot
     
-    # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
     
   })
   
