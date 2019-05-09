@@ -16,7 +16,7 @@ shinyUI(fluidPage(
   titlePanel("Rice Trait Scatterplot"),
   
   helpText("This application creates a scatterplot comparing two different rice traits. Choose a trait for the x and y axis, as well as a color trait, which will be represented by the dot color"),
-  # Sidebar with a slider input for number of bins 
+  # Sidebar with a slider input for traits 
   sidebarLayout(
     sidebarPanel(
        radioButtons("trait1",
@@ -30,7 +30,7 @@ shinyUI(fluidPage(
                    c("`Leaf pubescence`", "`Flag leaf width`", "`Flag leaf length`", "`Plant height`", "`Seed length`", "`Seed width`")
         )),
       
-    # Show a plot of the generated distribution
+    # Show a plot of the generated scatterplot
     mainPanel(plotOutput("pointPlot")
     )
   )
