@@ -13,21 +13,31 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Rice Trait Scatterplot"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
+       radioButtons("trait1",
+                   "choose an X axis trait:",
+                   c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")
+
+    ))),
     
+    sidebarLayout(
+      sidebarPanel(
+        radioButtons("trait2",
+                     "choose a Y axis trait:",
+                     c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")
+      ))),
+      sidebarLayout(
+        sidebarPanel(
+          radioButtons("trait3","choose a color trait:", 
+          c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width"))
+        )),
+      
     # Show a plot of the generated distribution
-    mainPanel(
-       plotOutput("distPlot")
+    mainPanel(plotOutput("pointPlot")
     )
   )
-))
+)
