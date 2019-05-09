@@ -10,7 +10,7 @@
 library(shiny)
 library(ggplot2)
 
-data.pheno <- read_csv("~/Assignments/Assignment_4_Flores.Amber/RiceSNPData/RiceDiversity.44K.MSU6.Phenotypes.csv",
+data.pheno <- read_csv("~/Assignments/Shiny_Karen.Amber/KarenAmberApp/rice.pheno.csv",
                        +                       na=c("NA","00")) #this tells R that missing data is denoted as "NA" or "00"
 
 # Define server logic required to draw a scatter plot
