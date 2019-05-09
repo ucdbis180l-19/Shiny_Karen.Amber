@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(ggplot2)
 
 # Define server logic required to draw a scatter plot
 shinyServer(function(input, output) {

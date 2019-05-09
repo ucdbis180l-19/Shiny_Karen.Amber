@@ -20,24 +20,17 @@ shinyUI(fluidPage(
     sidebarPanel(
        radioButtons("trait1",
                    "choose an X axis trait:",
-                   c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")
-
-    ))),
-    
-    sidebarLayout(
-      sidebarPanel(
-        radioButtons("trait2",
+                   c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")),
+      radioButtons("trait2",
                      "choose a Y axis trait:",
-                     c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")
-      ))),
-      sidebarLayout(
-        sidebarPanel(
-          radioButtons("trait3","choose a color trait:", 
-          c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width"))
+                     c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")),
+      radioButtons("trait3",
+                   "choose a color trait:", 
+                   c("Flowering time", "Flag leaf width", "Flag leaf length", "Plant height", "Seed length", "Seed width")
         )),
       
     # Show a plot of the generated distribution
     mainPanel(plotOutput("pointPlot")
     )
   )
-)
+))
