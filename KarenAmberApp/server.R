@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
     pl <- ggplot(data = data.pheno, aes_string(x = input$trait1, #choose a trait for the x axis 
                                                y = input$trait2, #choose a trait for the y axiz
                                                color = input$trait3)) #choose a trait for a color overlay
-    pl + geom_point() #make a scatter plot
+    pl + geom_point() #make a scatter plot 
     
     
     
