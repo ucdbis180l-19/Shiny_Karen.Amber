@@ -11,7 +11,7 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
-data.pheno <- read_csv("./KarenAmberApp/rice.pheno.csv",
+data.pheno <- read_csv("./rice.pheno.csv",
                        na=c("NA","00")) #this tells R that missing data is denoted as "NA" or "00"
 
 # Define server logic required to draw a scatter plot
