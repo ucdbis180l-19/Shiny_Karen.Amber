@@ -1,5 +1,6 @@
 library(shiny)
 library(ggplot2)
+library(tidyverse)
 
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
@@ -14,12 +15,13 @@ shinyServer(function(input, output) {
   output$boxPlot <- renderPlot({
     
     # set up the plot
-    pl <- ggplot(data = iris,
+    pl <- ggplot(data = iris.long,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="trait",
-                            y=input$species,
-                            fill="trait"
+                 aes_string(x = "trait",
+                            y= "measurements",
+                            fill = "trait", 
+                            group = input$Species
                  )
     )
     
