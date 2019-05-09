@@ -8,10 +8,10 @@ shinyUI(fluidPage( #create the overall page
   
   # Some helpful information
   helpText("This application creates a boxplot to show difference between",
-           "iris species.  Please use the radio box below to choose a trait",
+           "iris species.  Please use the radio box below to choose a species",
            "for plotting"),
   
-  # Sidebar with a radio box to input which trait will be plotted
+  # Sidebar with a radio box to input which species will be plotted
   sidebarLayout(
     sidebarPanel(
       radioButtons("species", #the input variable that the value will go into
