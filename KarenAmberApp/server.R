@@ -9,9 +9,10 @@
 
 library(shiny)
 library(ggplot2)
+library(tidyverse)
 
-data.pheno <- read_csv("~/Assignments/Shiny_Karen.Amber/KarenAmberApp/rice.pheno.csv",
-                       +                       na=c("NA","00")) #this tells R that missing data is denoted as "NA" or "00"
+data.pheno <- read_csv("/home/ubuntu/Assignments/Shiny_Karen.Amber/KarenAmberApp/rice.pheno.csv",
+                       na=c("NA","00")) #this tells R that missing data is denoted as "NA" or "00"
 
 # Define server logic required to draw a scatter plot
 shinyServer(function(input, output) {
