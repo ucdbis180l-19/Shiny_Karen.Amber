@@ -9,7 +9,7 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a Scatterplot
 shinyUI(fluidPage(
   
   # Application title
@@ -28,8 +28,12 @@ shinyUI(fluidPage(
       radioButtons("trait3",
                    "choose a color trait:", 
                    c("Seed number per panicle" = "`Seed number per panicle`", "Flag leaf width"= "`Flag leaf width`", "Flag leaf length" = "`Flag leaf length`", "Plant height" = "`Plant height`", "Seed length" = "`Seed length`","Seed width" = "`Seed width`")
-        )),
-      
+        ),
+      sliderInput("dot_size", "Point Size:",
+                  min = 0, max = 4,
+                  value = 1, step = 1
+                  )),
+    
     # Show a plot of the generated scatterplot
     mainPanel(plotOutput("pointPlot")
     )
