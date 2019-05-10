@@ -21,13 +21,13 @@ shinyUI(fluidPage(
     sidebarPanel(
        radioButtons("trait1",
                    "choose an X axis trait:",
-                   c("`Leaf pubescence`", "`Flag leaf width`", "`Flag leaf length`", "`Plant height`", "`Seed length`", "`Seed width`")),
+                   c("Seed number per panicle" = "`Seed number per panicle`", "Flag leaf width"= "`Flag leaf width`", "Flag leaf length" = "`Flag leaf length`", "Plant height" = "`Plant height`", "Seed length" = "`Seed length`","Seed width" =  "`Seed width`")),
       radioButtons("trait2",
                      "choose a Y axis trait:",
-                     c("`Leaf pubescence`", "`Flag leaf width`", "`Flag leaf length`", "`Plant height`", "`Seed length`", "`Seed width`")),
+                     c("Seed number per panicle" = "`Seed number per panicle`", "Flag leaf width"= "`Flag leaf width`", "Flag leaf length" = "`Flag leaf length`", "Plant height" = "`Plant height`", "Seed length" = "`Seed length`","Seed width" = "`Seed width`")),
       radioButtons("trait3",
                    "choose a color trait:", 
-                   c("`Leaf pubescence`", "`Flag leaf width`", "`Flag leaf length`", "`Plant height`", "`Seed length`", "`Seed width`")
+                   c("Seed number per panicle" = "`Seed number per panicle`", "Flag leaf width"= "`Flag leaf width`", "Flag leaf length" = "`Flag leaf length`", "Plant height" = "`Plant height`", "Seed length" = "`Seed length`","Seed width" = "`Seed width`")
         )),
       
     # Show a plot of the generated scatterplot
