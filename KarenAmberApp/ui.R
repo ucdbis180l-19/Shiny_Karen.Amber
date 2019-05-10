@@ -15,7 +15,7 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Rice Trait Scatterplot"),
   
-  helpText("This application creates a scatterplot comparing two different rice traits. Choose a trait for the x and y axis, as well as a color trait, which will be represented by the dot color"),
+  helpText("This application creates a scatterplot comparing two different rice traits. Choose a trait for the x and y axis, as well as a color trait, which will be represented by the dot color. Adjust the size of the point using the slider."),
   # Sidebar with a slider input for traits 
   sidebarLayout(
     sidebarPanel(
